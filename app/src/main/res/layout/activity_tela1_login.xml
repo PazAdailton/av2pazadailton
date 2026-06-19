@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tela1_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tela1_Login">
+
+
+    <TextView
+        android:id="@+id/t1_tx_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Autenticação"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/t1_tx_titulo">
+        >
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usuário (E-mail)"
+            android:textSize="12sp"
+            />
+
+        <EditText
+            android:id="@+id/t1_ed_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="20"
+            android:inputType="textEmailAddress"
+            android:text="Digite Seu Usuário" />
+
+        <TextView
+            android:id="@+id/t1_ed_senha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senha"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/editTextText3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Digite Sua Senha" />
+
+        <CheckBox
+            android:id="@+id/t1_cb_permanecer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Permanecer Conectado" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="400dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <Button
+            android:id="@+id/t1_bt_novo_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="ir_para_cadastro_usuario"
+            android:text="Novo Usuário"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/t1_bt_entrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="entrar"
+            android:text="Entrar"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
