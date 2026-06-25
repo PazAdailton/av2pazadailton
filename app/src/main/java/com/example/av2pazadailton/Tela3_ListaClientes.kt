@@ -11,7 +11,7 @@ class Tela3_ListaClientes : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tela3_lista_clientes)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.t1_tx_titulo)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.tela3_lista_clientes)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

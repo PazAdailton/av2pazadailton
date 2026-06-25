@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Av2pazadailton">
         <activity
+            android:name=".t3_template_para_linha"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Tela5_ListaContatos"
             android:exported="false" />
         <activity

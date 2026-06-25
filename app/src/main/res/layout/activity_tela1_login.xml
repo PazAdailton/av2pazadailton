@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:id="@+id/t1_tx_titulo"
+        android:id="@+id/tela3_lista_clientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -30,7 +30,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/t1_tx_titulo">
+        app:layout_constraintTop_toBottomOf="@id/tela3_lista_clientes">
         >
 
 
