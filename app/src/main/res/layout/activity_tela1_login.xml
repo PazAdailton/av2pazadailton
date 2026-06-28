@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:id="@+id/tela3_lista_clientes"
+        android:id="@+id/t1_tx_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -30,12 +30,12 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tela3_lista_clientes">
+        app:layout_constraintTop_toBottomOf="@id/t1_tx_titulo">
         >
 
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/t1_tx_label_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Usuário (E-mail)"
@@ -51,14 +51,14 @@
             android:text="Digite Seu Usuário" />
 
         <TextView
-            android:id="@+id/t1_ed_senha"
+            android:id="@+id/t1_tx_label_senha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Senha"
             android:textSize="12sp" />
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/t1_ed_senha"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:ems="10"

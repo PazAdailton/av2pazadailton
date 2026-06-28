@@ -23,7 +23,7 @@ class DB (context: Context) :
         )
         db.execSQL(
             "CREATE TABLE clientes ( " +
-                "cod_cliente INTEGER PRIMARY KEY AUTOINCREMET, " +
+                "cod_cliente INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "nome_cliente TEXT, " +
                 "email_cliente TEXT, " +
                 "telefone_cliente TEXT, " +
