@@ -15,9 +15,9 @@ class UsuarioDao {
     fun salvarUsuario(nome: String, email: String, senha: String): Long {
         sqlOpen = banco.writableDatabase
         val content = ContentValues()
-        content.put("usu_nome", nome)
-        content.put("usu_email", email)
-        content.put("usu_senha", senha)
+        content.put("nome_usuario", nome)
+        content.put("email_usuario", email)
+        content.put("senha_usuario", senha)
 
         val id = sqlOpen.insert("usuario", "", content)
         Log.d("Adailton_v2", "UsuárioDAO->salvarUsuario() Cadastrado ID: $id")
@@ -27,7 +27,7 @@ class UsuarioDao {
     fun validarLogin(email: String, senha: String): Boolean {
         sqlOpen = banco.readableDatabase
         val colunas = arrayOf("cod_usuario")
-        val selection = "email_usuario = ? And senha_usuario ?"
+        val selection = "email_usuario = ? And senha_usuario = ?"
         val selectionArgs = arrayOf(email, senha)
 
         val cursor = sqlOpen.query("usuario", colunas, selection, selectionArgs, null, null, null)

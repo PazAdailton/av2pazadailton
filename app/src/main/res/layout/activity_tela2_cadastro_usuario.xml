@@ -8,46 +8,38 @@
     android:layout_height="match_parent"
     tools:context=".Tela2_CadastroUsuario">
 
-
     <TextView
         android:id="@+id/t2_tx_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:textAlignment="center"
         android:text="Novo Usuário"
         android:textSize="24sp"
-        android:textStyle="normal"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/t2_tx_titulo"
-        >
-
+        app:layout_constraintTop_toBottomOf="@id/t2_tx_titulo">
 
         <Button
             android:id="@+id/t2_bt_buscar_contatos"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:onClick="buscar_em_contatos"
             android:text="Importar Contatos"
-            android:textColor="@color/design_default_color_on_secondary"
-            android:textStyle="bold"
-            />
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -91,8 +83,6 @@
             android:hint="Crie uma senha"
             android:inputType="textPassword" />
 
-
-
     </LinearLayout>
 
     <LinearLayout
@@ -100,7 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="320dp"
+        android:layout_marginBottom="24dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,28 +98,28 @@
 
         <Button
             android:id="@+id/t2_bt_cancelar"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="cancelar"
             android:text="Cancelar"
-            android:textAlignment="viewStart"
             android:textColor="@android:color/holo_red_dark"
-            android:textSize="16sp"
             android:textStyle="bold" />
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/t2_bt_salvar"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="salvar_usuario"
             android:text="Salvar"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_green_dark"            android:textSize="16sp"
+            android:textColor="@android:color/holo_green_dark"
             android:textStyle="bold" />
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

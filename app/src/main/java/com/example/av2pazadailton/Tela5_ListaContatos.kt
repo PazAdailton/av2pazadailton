@@ -38,20 +38,39 @@ class Tela5_ListaContatos : AppCompatActivity() {
         origem = intent.getStringExtra("origem_chamada")?: ""
         Log.d(TAG, "Tela5_ListaContatos->Origem da chamada: $origem")
 
-        lerContatosDispositivo()
+        if(checkSelfPermission(android.Manifest.permission.READ_CONTACTS) == android.content.pm.PackageManager.PERMISSION_GRANTED){
+            carregarListaEContatos()
+        }else{
+            requestPermissions(arrayOf(android.Manifest.permission.READ_CONTACTS), 123)
+        }
+    }
 
-        val adapatadorSimples = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaContatosNomes)
-        listaContatosView.adapter = adapatadorSimples
+        private fun carregarListaEContatos() {
+            lerContatosDispositivo()
 
-        listaContatosView.setOnItemClickListener {parent, view, position, id ->
-            val contatoSelecionado = listaObjetoPessoas[position]
-            Log.d(TAG, "Tela5_ListaContatos->Contato clicado: ${contatoSelecionado.nome}")
+            val adaptadorSimples = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaContatosNomes)
+            listaContatosView.adapter = adaptadorSimples
 
-            val intentRetorno = Intent()
-            intentRetorno.putExtra("objeto_de_retorno", contatoSelecionado)
+            listaContatosView.setOnItemClickListener {parent, view, position, id ->
+                val contatoSelecionado = listaObjetoPessoas[position]
+                Log.d(TAG, "Tela5_ListaContatos->Contato clicado: ${contatoSelecionado.nome}")
 
-            setResult(222, intentRetorno)
-            finish()
+                val intentRetorno = Intent()
+                intentRetorno.putExtra("objeto_de_retorno", contatoSelecionado)
+                setResult(222, intentRetorno)
+                finish()
+            }
+        }
+
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == 123 && grantResults.isNotEmpty() && grantResults[0] == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+            carregarListaEContatos()
         }
     }
 

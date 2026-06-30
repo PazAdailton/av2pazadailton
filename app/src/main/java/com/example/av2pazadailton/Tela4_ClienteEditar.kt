@@ -121,7 +121,7 @@ class Tela4_ClienteEditar : AppCompatActivity() {
             Toast.makeText(this, "Cliente atualizado com sucesso!", Toast.LENGTH_SHORT).show()
         }
         setResult(RESULT_OK)
-        return
+        finish()
     }
 
     fun excluir(v: View) {

@@ -69,7 +69,7 @@ class Tela3_ListaClientes : AppCompatActivity() {
 
     }
 
-    fun novo(v: View){
+    fun novo_cliente(v: View){
         Log.d(TAG, "Tela3_ListaClientes->novo() Abrindo formulário vazio na Tela 4.")
         val intencaoNovo = Intent(this, Tela4_ClienteEditar::class.java)
         intencaoNovo.putExtra("email_chave", "")
