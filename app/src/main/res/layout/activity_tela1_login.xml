@@ -17,9 +17,7 @@
         android:layout_marginTop="32dp"
         android:text="Autenticação"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -31,8 +29,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/t1_tx_titulo">
-        >
-
 
         <TextView
             android:id="@+id/t1_tx_label_email"
@@ -48,7 +44,7 @@
             android:layout_height="48dp"
             android:ems="20"
             android:inputType="textEmailAddress"
-            android:text="Digite Seu Usuário" />
+            android:hint="Digite Seu nome" />
 
         <TextView
             android:id="@+id/t1_tx_label_senha"
@@ -69,6 +65,7 @@
             android:id="@+id/t1_cb_permanecer"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:minHeight="48dp"
             android:text="Permanecer Conectado" />
     </LinearLayout>
 

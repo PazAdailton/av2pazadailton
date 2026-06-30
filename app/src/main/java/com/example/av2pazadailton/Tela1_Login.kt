@@ -76,7 +76,7 @@ class Tela1_Login : AppCompatActivity() {
         }
     }
 
-    fun cadastrar_usuario(v: View) {
+    fun ir_para_cadastro_usuario(v: View) {
         Log.d(TAG, "Tela1_Login->cadastrar_usuario() Indo para tela2")
         startActivity(Intent(this, Tela2_CadastroUsuario::class.java))
     }

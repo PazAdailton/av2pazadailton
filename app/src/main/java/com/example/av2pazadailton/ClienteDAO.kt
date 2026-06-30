@@ -13,7 +13,7 @@ class ClienteDAO {
     }
 
     fun inserir(cliente: ClassePessoa): Long {
-        sqlOpen = banco.readableDatabase
+        sqlOpen = banco.writableDatabase
         val content = ContentValues()
         content.put("nome_cliente", cliente.nome)
         content.put("email_cliente", cliente.email)
@@ -30,7 +30,7 @@ class ClienteDAO {
         val lista = ArrayList<ClassePessoa>()
         sqlOpen = banco.readableDatabase
 
-        val cursor = sqlOpen.query("clientes", null, null, null, null, null, "cliente_nome ASC")
+        val cursor = sqlOpen.query("clientes", null, null, null, null, null, "nome_cliente ASC")
 
         while(cursor.moveToNext()) {
             val nome = cursor.getString(cursor.getColumnIndexOrThrow("nome_cliente"))

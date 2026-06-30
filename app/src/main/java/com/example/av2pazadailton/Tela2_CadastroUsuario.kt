@@ -1,7 +1,6 @@
 package com.example.av2pazadailton
 
 import android.content.Intent
-import android.nfc.Tag
 import android.os.Bundle
 import android.util.Log
 import android.view.View
